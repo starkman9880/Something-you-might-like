@@ -1,0 +1,810 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html
+    lang="en_US"
+    xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta
+        content="text/html; charset=UTF-8"
+        http-equiv="Content-Type"
+    />
+    <meta
+        content="telephone=no"
+        name="format-detection"
+    />
+    <meta
+        content="width=device-width, initial-scale=1.0; user-scalable=no;"
+        name="viewport"
+    />
+    <meta
+        content="IE=9; IE=8; IE=7; IE=EDGE"
+        http-equiv="X-UA-Compatible"
+    />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta
+        content="light dark"
+        name="color-scheme"
+    />
+    <meta
+        content="light dark"
+        name="supported-color-schemes"
+    />
+    <style type="text/css">
+        @font-face {
+            font-family: "Ember";
+            font-weight: 600;
+            src: local("Ember"),
+            url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Bd._CB1515450239_.WOFF) format("woff");
+        }
+
+        @font-face {
+            font-family: "Ember";
+            font-style: normal;
+            font-weight: 400;
+            src: local("Ember"),
+            url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Rg._CB1515450239_.WOFF) format("woff");
+        }
+
+        @font-face {
+            font-family: "Ember";
+            font-weight: 200;
+            src: local("Ember"),
+            url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Lt._CB1515450239_.WOFF) format("woff");
+        }
+
+        @font-face {
+            font-family: "Ember";
+            font-weight: 500;
+            src: local("Ember"),
+            url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Md._CB1515450239_.WOFF) format("woff");
+        }
+
+        /* RESET STYLES */
+        body {
+            background-color: var(--body-bg) !important;
+            color: var(--body-color) !important;
+            margin: 0 !important;
+            padding: 0;
+        }
+
+        table {
+            border-spacing: 0;
+            margin: 0 auto !important;
+        }
+
+        table, table td {
+            border-collapse: collapse !important;
+        }
+
+        table th, h3, h4, h5 {
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        td, a, span {
+            word-break: keep-all !important;
+        }
+
+        body, table, td, a {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* PAGE STYLES */
+        .sans {
+            font-family: Ember, Helvetica, Arial, sans-serif;
+        }
+
+        h1 {
+            display: block;
+            font-size: 40px;
+            font-weight: 100;
+            line-height: 46px;
+            text-decoration: none;
+        }
+
+        h2 {
+            display: block;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        h3 {
+            display: block;
+            font-size: 18px;
+            line-height: 24px;
+            text-decoration: none;
+        }
+
+        h4 {
+            display: block;
+            font-size: 18px;
+            line-height: 24px;
+            text-decoration: none;
+        }
+
+        h5 {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-decoration: none;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin: 0;
+            text-decoration: none;
+        }
+
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* default body text colors */
+        h1, h2, h3, h4, h5, p, table, th, td, li, .sans {
+            color: #0f1111;
+        }
+
+        a {
+            color: #007185;
+            text-decoration: none;
+        }
+
+        /* iOS autolinks */
+        .appleBody a, .appleFooter a {
+            color: #007185 !important;
+            text-decoration: none;
+        }
+
+        a[x-apple-data-detectors] {
+            color: #007185 !important;
+            font-family: inherit !important;
+            font-size: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* gmail autolinks */
+        u + #body a {
+            color: #007185 !important;
+            font-family: inherit !important;
+            font-size: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        .button {
+            background-color: #FFD814 !important;
+            color: #0f1111 !important;
+        }
+
+        /* samsung mail autolinks */
+        #MessageViewBody a {
+            color: #007185 !important;
+            font-family: inherit !important;
+            font-size: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* inline footer autolinks */
+        .footerlinks a, a {
+            color: #007185 !important;
+            text-decoration: none;
+        }
+
+        .product-name, .product-name a, .product-price {
+            color: #0f1111 !important;
+        }
+
+        .zeroBorder {
+            border: 0;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .light-img {
+            background-color: #ffffff;
+            background-image: linear-gradient(#ffffff, #ffffff);
+        }
+
+        .product-image-td {
+            background: linear-gradient(rgba(15, 17, 17, 0.03), rgba(15, 17, 17, 0.03));
+        }
+
+        .product-image {
+            mix-blend-mode: multiply;
+        }
+
+        .product-price sup {
+            line-height: 0px !important;
+        }
+
+
+        /* DESKTOP STYLE */
+        @media screen and (min-width: 600px) {
+
+            .button {
+                padding-top: 6px !important;
+                padding-bottom: 6px !important;
+            }
+
+            .product-name {
+                font-size: 14px !important;
+                line-height: 20px !important;
+            }
+
+            .product-price {
+                font-size: 21px !important;
+                line-height: 22px !important;
+            }
+
+            .mobile-only {
+                display: none !important;
+                mso-hide: all !important;
+            }
+
+            .desktop-only {
+                display: initial !important;
+                mso-hide: none !important;
+            }
+        }
+
+        /* MOBILE STYLE */
+        @media screen and (max-width: 599px) {
+            .mobile {
+                width: 100% !important;
+            }
+
+            .mobInline {
+                display: inline !important;
+            }
+
+            /*widths*/
+            .full {
+                max-width: 100% !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                width: 100% !important;
+            }
+
+            .mobile-only {
+                display: initial !important;
+                mso-hide: none !important;
+            }
+
+            .desktop-only {
+                display: none !important;
+                mso-hide: all !important;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --body-bg: #ffffff;
+                --body-color: #000000;
+            }
+
+            .dark-img {
+                display: none !important;
+            }
+
+            .light-img {
+                display: block !important;
+            }
+
+            .footer {
+                background-color: #F0F2F2 !important;
+            }
+        }
+
+        /* dark mode styles */
+        @media (prefers-color-scheme: dark ) {
+            :root {
+                --body-bg: #181A1A;
+                --body-color: #ffffff;
+            }
+            
+            body {
+                background-color: #181A1A !important;
+            }
+
+            .dark-img {
+                display: block !important;
+            }
+
+            .light-img {
+                display: none !important;
+            }
+
+            .darkmode {
+                background-color: #181A1A !important;
+            }
+
+            h1, h2, h3, h4, h5, p, li, .sans, .product-name, .product-name a {
+                color: #ffffff !important;
+            }
+
+            a, .footerlinks a {
+                color: #6ED6E6 !important;
+            }
+
+
+            .footer {
+                background-color: #303333 !important;
+            }
+
+            .product-discount {
+                color: #FF8C8C !important;
+            }
+
+            .product-price {
+                color: #FFFFFF !important;
+            }
+
+            .product-list-price {
+                color: #A2A6A6 !important;
+            }
+
+            .product-image-td {
+                background: linear-gradient(rgba(255, 255, 255, 1), rgba(255,255,255,1));
+            }
+
+            .product-image {
+                mix-blend-mode: initial;
+            }
+        }
+
+        /* dark mode styles for android outlook */
+        [data-ogsc] .dark-img {
+            display: block !important;
+        }
+
+        [data-ogsc] .light-img {
+            display: none !important;
+        }
+
+        [data-ogsc] .darkmode {
+            background-color: #000000 !important;
+        }
+
+        [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] h3, [data-ogsc] h4, [data-ogsc] h5, [data-ogsc] p, [data-ogsc] li, [data-ogsc] .sans, [data-ogsc] .product-name, [data-ogsc] .product-name a {
+            color: #ffffff !important;
+        }
+
+        [data-ogsc] a, [data-ogsc] .footerlinks a {
+            color: #6ED6E6 !important;
+        }
+
+
+        [data-ogsc] .product-discount {
+            color: #FF8C8C !important;
+        }
+
+        [data-ogsc] .product-price {
+            color: #FFFFFF !important;
+        }
+
+        [data-ogsc] .product-list-price {
+            color: #A2A6A6 !important;
+        }
+
+        [data-ogsc] .product-image-td {
+            background: linear-gradient(rgba(255, 255, 255, 1), rgba(255,255,255,1));
+        }
+
+        [data-ogsc] .product-image {
+            mix-blend-mode: initial;
+        }
+
+    </style>
+    <!--[if mso 9]>
+    <style type='text/css'>
+        .product-image-wrapper {
+            width: 156px;
+            height: 156px;
+        }
+    </style>
+    <![endif]-->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG />
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <style>
+        body, h1, h2, h3, h4, table, th, td, p, li, a, .sans {
+            font-family: Helvetica, Arial, sans-serif !important;
+        }
+
+        sup {
+            font-size: .92em !important;
+        }
+    </style>
+    <![endif]-->
+</head>
+<body class='body'><img width="1" height="1" src="https://www.amazon.com/gp/r.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=1G6AHY9FEO0JU&T=O&U=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FG%2F01%2Fnav%2Ftransp.gif&H=H9APA0EZPAPFOLAZ0VI08JW10H8A&ref_=pe_3681270_725613390_opens" />
+<div itemscope itemtype="http://schema.org/Organization"></div>
+<div itemscope itemtype="http://schema.org/DiscountOffer"></div>
+<!--[if (gte mso 9)|(IE)]>
+<table
+    align='center'
+    class='zeroBorder'
+    width='600'
+    style='margin-left: auto; margin-right: auto; width: 600px;'
+>
+    <tbody width='600'>
+    <tr>
+        <td width='600' style='width: 600px;'>
+<![endif]-->
+<table
+    class="zeroBorder"
+    style="margin-left: auto; margin-right: auto; width:100%;"
+    role="presentation"
+>
+    <tbody>
+    <tr>
+        <td width='600'>
+            <table
+                width='600'
+                role="presentation"
+                class="sans mobile zeroBorder"
+                style="width:100%; max-width:600px; margin: 0 auto;"
+            >
+                <tr>
+                    <td width='568' style="padding: 0 16px;"><!-- LOGO -->
+<table
+    class="full zeroBorder"
+    style="width: 100%; max-width: 568px;"
+    role="presentation"
+>
+    <tbody>
+    <tr>
+        <td style="padding:32px 0 24px 0; text-align:left;">
+            <a
+                href="https://www.amazon.com/gp/r.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=35E08X8K8UADP&T=C&U=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dpe_3681270_725613390&H=WB1F22S4CYZ2KCXPAV3FXNBZLTQA&ref_=pe_3681270_725613390"
+                target="_blank"
+            >
+                <img
+                    class="light-img"
+                    height="30"
+                    role="presentation"
+                    src="https://m.media-amazon.com/images/G/01/automated/2022/Amazon_logo_US.png"
+                    style="width:auto; height:30px; max-width:100%; display:block; border:0; float:left; background-color: #ffffff;"
+                    alt='Amazon.com'
+                />
+                <!--[if !mso]><! -->
+                <img
+                    class="dark-img"
+                    height="30"
+                    role="presentation"
+                    src="https://m.media-amazon.com/images/G/01/automated/2022/amazon_logo_RGB_WHITE.png"
+                    style="display:none; width:auto; height:30px; max-width:100%; border:0; float:left;"
+                    alt='Amazon.com'
+                />
+                <!--<![endif]-->
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table><table
+    class="full zeroBorder"
+    style="width: 100%; max-width: 568px;"
+    role="presentation"
+>
+    <tbody>
+        <tr>
+            <td
+                class="sans"
+                style="padding-bottom: 8px; font-size: 18px; line-height: 22px; color: #0f1111; text-align: left;"
+            >Hello starky paulino,
+                </td>
+        </tr>
+        <tr>
+            <td
+                class="sans"
+                style="padding-bottom: 12px; font-size: 18px; line-height: 22px; color: #0f1111; text-align: left;"
+            >
+                We found something you might like.
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table
+    border="0"
+    class="zeroBorder full"
+    
+    align="left"
+    width="568"
+    role="presentation"
+>
+    <tbody>
+    <tr>
+        <td style="vertical-align: top; padding-top: 8px; padding-bottom: 8px;width:156px;">
+
+
+    
+<table style='width: 100%; height: 156px; border-radius: 4px;'>
+    <tbody>
+        <tr>
+            <td class='product-image-td' style='border-radius:4px; position: relative; height: 156px; width: 100%; vertical-align: center; text-align: center;'>
+                <a
+                    href="https://www.amazon.com/gp/r.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=1P1XDMZY01G5D&T=C&U=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB09YV5X57C%2Fref%3Dpe_3681270_725613390_em_1p_0_lm&H=LIMI28A1G9RIHEADNVKLHTWC2B4A&ref_=pe_3681270_725613390_em_1p_0_lm"
+                    class='product-image-wrapper' style="display: block; padding:8px; position:relative; background-color:transparent; border-radius: 4px; min-width: 140px;">
+                    <img
+                        class='product-image'
+                        alt="USB 3.0 &amp;Type C DVD Drive, CD Burner Driver Drive-Free High-Speed Read-Write Recorder, External DVD-RW Player Writer Reader for Desktop PC Laptop (Black)"
+                        height="140"
+                        src="https://m.media-amazon.com/images/I/41UOXP8Y0oL._SR500,500_.jpg"
+                        style="max-height:140px; max-width:140px; height:auto; width:auto; margin:0 auto; display:block; "
+                        width="140"
+                    />
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td>
+    
+        <td style="vertical-align: top;padding-top: 8px;padding-bottom: 8px;padding-left: 8px;"><p class="product-name" style="margin:0 0 4px 0; font-size: 15px; line-height: 20px;">
+    <a
+        href="https://www.amazon.com/gp/r.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=HYFFFYPP28FQ&T=C&U=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB09YV5X57C%2Fref%3Dpe_3681270_725613390_em_1p_0_lm&H=K5UZSY0J9GE9M1NJKJBLQRSE9ASA&ref_=pe_3681270_725613390_em_1p_0_lm"
+        style="text-decoration: none; color:#232F3E;"
+    >
+            USB 3.0 &Type C DVD Drive, CD Burner Driver Drive-Free High-Speed Read-Write Recorder, External DVD-RW...
+    </a>
+</p>
+        <table width='100%' style='width: 100%'>
+        <tbody>
+        <tr>
+            <td style='padding-bottom: 4px;'><span class='product-price' style="font-size: 22px; font-weight: 400; line-height: 26px;"><sup
+                        style="font-size: 12px; position: relative; top: 2px;">$</sup>24<sup
+                        style="font-size: 12px; position: relative; top: 2px;">99</sup>
+            </span>
+                </td>
+        </tr><tr>
+            <td height='4px' style='height: 4px;'></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+                <!--[if mso]>
+                <v:roundrect
+                    arcsize='24px'
+                    fillcolor='#FFD814'
+                    href='https://www.amazon.com/gp/product/B09YV5X57C/ref=em_1p_0_lm'
+                    stroke='f'
+                    style='border:0;width:120px;height:32px;v-text-anchor:middle;'
+                    xmlns:v='urn:schemas-microsoft-com:vml'
+                    xmlns:w='urn:schemas-microsoft-com:office:word'
+                >
+                    <w:anchorlock/>
+                    <v:textbox inset='0,0,0,0'>
+                        <center>
+                <![endif]-->
+                <a
+                    aria-describedby="USB 3.0 &Type C DVD Drive, CD Burner Driver Drive-Free High-Speed..."
+                    class="button"
+                    href="https://www.amazon.com/gp/r.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=381AG851BUJEH&T=C&U=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fproduct%2FB09YV5X57C%2Fref%3Dpe_3681270_725613390_em_1p_0_lm&H=W98MHDUVJPEED6QWA8JMOQVAJRSA&ref_=pe_3681270_725613390_em_1p_0_lm"
+                    style="background-color: #FFD814; color: #0f1111 !important; border-radius: 24px; padding: 8px 12px; display: inline-block; box-shadow: 1px 2px 4px rgba(153, 153, 153, 0.2); font-size: 13px; line-height: 16px; white-space:nowrap; "
+                >
+                    <span>
+                        Shop now
+                    </span>
+                </a>
+                <!--[if mso]>
+                </center>
+                </v:textbox>
+                </v:roundrect>
+                <![endif]-->
+            </td>
+    </tr>
+    </tbody>
+</table>
+    
+
+    <!-- CTA -->
+    <table
+        class="full zeroBorder"
+        style="width: 100%; max-width: 568px;"
+        role="presentation"
+    >
+        <tbody>
+            <tr>
+                <td style="padding-bottom: 16px; padding-top: 16px; font-size: 15px; line-height: 24px; color: #007185; text-align: left;">
+                    <a
+                        href="https://www.amazon.com/gp/f.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=2CCXW0F4935VI&T=C&U=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fref%3Dpe_3681270_725613390_em_fl&H=LIQMHUBTUPNLUNMCWNNZ43YFPZ0A&ref_=pe_3681270_725613390_em_fl"
+                        target="_blank"
+                    >See all recommendations</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- /CTA -->
+
+
+    </td>
+                </tr>
+                <tr>
+                    <td width='568' style='height: 8px;'>
+                        <span></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="cs-slot deviceWidth" style='padding: 0 16px; width: 100%; max-width: 568px;'
+                               cellspacing="0" cellpadding="0" border="0" align="center" width="600">
+                            <tr>
+                                <td><table cellspacing="0" cellpadding="0" border="0" class="cs-image-slot"
+                                   style="text-align:center;" align="center">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        
+                                        <map class="image-csslot-normal" name="email-footer-center-1-0">
+                                            <area href="https://www.amazon.com/gp/f.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=MT6ZLY43ESCT&T=C&U=https%3A%2F%2Fwww.amazon.com%2Fonemedical%2F%3Fref_%3Dpe_3681270_725613390_OM_SAW_GAME_v2_A_0523&H=IO2FBNIDXWLANLIPRFM0KVOWT9YA&ref_=pe_3681270_725613390_OM_SAW_GAME_v2_A_0523" shape="rect" coords="0,0,610,120">
+                                        </map>
+                                        
+                                        <div class="image-csslot-normal">
+                                            <img border="0" align="middle" alt="24/7 healthcare happens here"
+                                                 usemap="#email-footer-center-1-0" src="https://m.media-amazon.com/images/G/01/Negroni/D2C/Email-Sawyer/NG_DTC_Email-Sawyer.png" style="max-width:100%;">
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table><div style="height: 8px"></div></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr><td width='568' style='height: 16px;'>
+                            <span></span>
+                        </td>
+                    </tr>
+                <tr>
+                    <td
+                        width='568'
+                        class="footer"
+                        style="padding: 0 16px; background-color: #f0f2f2;"
+                    ><!-- FOOTER -->
+<table
+    id="footerId"
+    class="zeroBorder footer"
+    style="margin-left: auto; margin-right: auto; width: 100%; max-width: 600px;"
+    role="presentation"
+>
+    <tbody>
+        <tr>
+            <td style="padding-top: 32px;">
+                <p
+                    class="sans footerlinks"
+                    style="font-size:14px; line-height: 20px; color: #494d4d;"
+                >
+                    <a
+                        href="https://www.amazon.com/gp/f.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=2M0JLYC3WOMMP&T=C&U=https%3A%2F%2Fwww.amazon.com%2F%2Fgp%2Fcpc%2Fhomepage%3Fref_%3Dpe_3681270_725613390_pe_ob_ftr_comm_prfs&H=8TBD8HDRAUGC7LI5SOU9F7PK0PWA&ref_=pe_3681270_725613390_pe_ob_ftr_comm_prfs"
+                        style="text-decoration:none;"
+                        target="_blank"
+                    >Update your preferences</a>
+                    <span aria-hidden='true' style='padding:0 8px; color:#007185;'>|</span>
+                    <a
+                        href="https://www.amazon.com/gp/f.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=2V3CFS22ST3JH&T=X&U=https%3A%2F%2Fwww.amazon.com%2F%2Fgp%2Fgss%2Fo%2F1bG-znSR39hs1IMQdK7YBX54WkB04cQzd-a3aLchPBsts0z-XH0TMLwH4PwTkc18T&H=DL4EBBYYMRCSKFXHI8OHCRRBZOYA"
+                        style="text-decoration:none;"
+                        target="_blank"
+                    >Unsubscribe</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-top: 20px;">
+                <p class="footerlinks">
+                    ©2023 Amazon.com, Inc. or its affiliates. Amazon and all related marks are trademarks of Amazon.com, Inc. or its affiliates, Amazon.com 410 Terry Avenue N., Seattle, WA 98109. Product prices and availability are subject to change. Ref: 725613390.
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 36px; padding-top: 20px;">
+                <p>
+                    <a
+                        href="https://www.amazon.com/gp/f.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=20BL14PEB6KYT&T=C&U=https%3A%2F%2Fwww.amazon.com%2F%2Fgp%2Fhelp%2Fcustomer%2Fdisplay.html%3FnodeId%3D468496%26ref_%3Dpe_3681270_725613390&H=OCII9PADTUIHOTMIGHAN8PPHUMKA&ref_=pe_3681270_725613390"
+                        style="text-decoration:none;"
+                        target="_blank"
+                    >Privacy Policy</a>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-bottom: 36px;">
+                <img
+                    class="light-img"
+                    height="12"
+                    role="presentation"
+                    src="https://m.media-amazon.com/images/G/01/automated/2022/Smile_logo_US.png"
+                    style="width:auto; height:12px; max-width:100%; display:block; border:0; float:left; background-color: #F0F2F2; background-image: linear-gradient(#F0F2F2, #F0F2F2)"
+                    alt='Amazon.com'
+                />
+                <!--[if !mso]><! -->
+                <img
+                    class="dark-img"
+                    style="display:none; width:auto; height:12px; max-width:100%; border:0; float:left;"
+                    height="12"
+                    role="presentation"
+                    src="https://m.media-amazon.com/images/G/01/automated/2022/Smile_Mark_RGB_WHITE.png"
+                    alt='Amazon.com'
+                />
+                <!--<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]>
+</td>
+</tr>
+</tbody>
+</table>
+<![endif]-->
+<img width="1" height="1" src="https://www.amazon.com/gp/r.html?C=24UV64WK5BQ8H&K=V5A88DU43INQ&M=urn:rtn:msg:20230529160954335b63f328aa4a5893226378aee0p0na&R=ZVZZNGRCM5WL&T=E&U=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FG%2F01%2Fnav%2Ftransp.gif&H=ZJIHDOELBELPJNADWKOYCGRZ7U0A&ref_=pe_3681270_725613390_open" /></body>
+</html>
+
+
+
+
